@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+.env
+
+mysql-data/
+mysql/
+node_modules/
+
+*.log
+
+docker-volumes/

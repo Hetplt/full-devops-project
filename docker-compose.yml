@@ -1,0 +1,25 @@
+services:
+
+  frontend:
+    image: nginx
+    container_name: frontend-nginx
+    ports:
+      - "8080:80"
+
+  backend:
+    build: ./app
+    container_name: flask-backend
+    ports:
+      - "5000:5000"
+
+  database:
+    image: mysql:8
+    container_name: mysql-db
+
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mydb
+
+    ports:
+      - "3306:3306"
+
